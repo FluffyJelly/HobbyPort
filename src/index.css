@@ -1,0 +1,241 @@
+:root {
+  --main-color: rgba(255, 255, 255, 0.87);
+  --background-light: #ffffff;
+  --background-dark: #71418854;
+  --link-color: #646cff;
+  --link-hover-color: #535bf2;
+  --button-background: #1a1a1a;
+  --button-background-light: #f9f9f9;
+  --text-color-light: #213547;
+  --text-color-dark: #204055;
+  --hover-border-color: #646cff;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--main-color);
+  background-color: var(--background-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+body {
+  padding-top: 100px; /* Pushes content down */
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-width: 320px;
+  min-height: 100vh; /* Ensures the body takes full viewport height */
+  flex-direction: column; /* Optional: If you want items stacked vertically */
+  overflow-x: hidden;
+}
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--button-background);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: var(--hover-border-color);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-color-light);
+    background-color: var(--background-light);
+  }
+
+  a:hover {
+    color: #747bff; /* Adjust for better visibility */
+  }
+
+  button {
+    background-color: var(--button-background-light);
+  }
+}
+
+/* Navbar Styles */
+.navbar {
+  padding: 1rem;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;  
+  top: 0;
+  right: 0;
+  width: 100%;    
+  height: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-image: url('./assets/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1000;
+}
+
+.navbar img {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  height: 180px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.navbar a {
+  display: inline-block; 
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px; /* Optional: set a max width */
+
+}
+/* About Container */
+.about-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; 
+}
+
+/* About Header */
+.about-header {
+  padding-top: 200px;
+  text-align: center;
+  color: #ac9b08;
+
+}
+
+/* About Introduction */
+.about-introduction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 2%;
+  padding-left: 4%;
+}
+
+.about-headers {
+  color: #ac9b08;
+
+}
+
+/* Hall of Fame Container */
+.hof-container {
+  padding-top: 15%;
+  
+  flex-direction: column;
+  justify-self: center;
+  margin: 20px auto;
+
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.hof-header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ac9b08;
+  font-weight: bold;
+}
+
+.hof-animeimage, .hof-mangaimage {
+  margin: 10px 0;
+}
+
+.hof-animeimage img, .hof-mangaimage img {
+  max-width: 50%;
+  height: 2%;
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+.hof-animeimage img:hover, .hof-mangaimage img:hover {
+  transform: scale(1.05);
+}
+
+.anime-container {
+  padding-top: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 2000px; /* Optional: set a max width */
+
+}
+
+
+.flex-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 100px; 
+  padding: 0 2%; 
+  gap: 1rem;
+
+}
+
+/* Flex Item */
+.flex-item {
+  background-color: var(--text-color-dark); 
+  width: 30%;
+  color: rgb(87, 24, 24); 
+  padding: 20px; 
+  margin: 0 10px; 
+  border-radius: 5px; 
+  text-align: center;  
+}
+
+.flex-item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: row; /* Keep items side by side */
+    height: auto; 
+  }
+}
+
+
