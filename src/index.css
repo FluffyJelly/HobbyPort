@@ -33,7 +33,7 @@ a:hover {
 }
 
 body {
-  padding-top: 5%; /* Pushes content down */
+  padding-top: 100px; /* Pushes content down */
   margin: 0;
   display: flex;
   justify-content: center; /* Centers horizontally */
@@ -96,7 +96,7 @@ button:focus-visible {
   top: 0;
   right: 0;
   width: 100%;    
-  height: 30%;
+  height: 300px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-image: url('./assets/banner.jpg');
   background-size: cover;
